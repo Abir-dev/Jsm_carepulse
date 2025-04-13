@@ -1,8 +1,6 @@
 "use client"
 
-import { MoreHorizontal } from "lucide-react"
- 
-import { Button } from "@/components/ui/button"
+
 
 
 import { ColumnDef } from "@tanstack/react-table"
@@ -55,7 +53,7 @@ export const columns: ColumnDef<Appointment>[] = [
         <div className="flex items-center gap-3">
             <Image 
                 src={doctor?.image}
-                alt={doctor.name}
+                alt={doctor?.name}
                 width={100}
                 height={100}
                 className="size-8"
