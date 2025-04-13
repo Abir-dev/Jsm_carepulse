@@ -10,10 +10,11 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [isAdmin, setIsAdmin] = useState(false);
 
+  // Ensuring that `useSearchParams` runs only on the client side (inside `useEffect`)
   useEffect(() => {
     const searchParams = useSearchParams();
     setIsAdmin(searchParams.get("admin") === "true");
-  }, []); // Only run on the client-side
+  }, []); // This useEffect will run only on the client side
 
   return (
     <div className="flex h-screen max-h-screen">
