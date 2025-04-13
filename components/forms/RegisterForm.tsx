@@ -282,7 +282,7 @@ const RegisterForm = ({ user }: {user: User}) => {
         <CustomFormField 
         fieldType={FormFieldType.INPUT}
         control={form.control}
-        name="identification Number"
+        name="identificationNumber"
         label="Identification number"
         placeholder="123456789"
         />
