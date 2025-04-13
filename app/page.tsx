@@ -5,16 +5,10 @@ import PatientForm from "@/components/forms/PatientForm";
 import PasskeyModal from "@/components/PasskeyModal";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  // Ensuring that `useSearchParams` runs only on the client side (inside `useEffect`)
-  useEffect(() => {
-    const searchParams = useSearchParams();
-    setIsAdmin(searchParams.get("admin") === "true");
-  }, []); // This useEffect will run only on the client side
+  const searchParams = useSearchParams();
+  const isAdmin = searchParams.get("admin") === "true";
 
   return (
     <div className="flex h-screen max-h-screen">
